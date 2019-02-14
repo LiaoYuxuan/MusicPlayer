@@ -40,6 +40,26 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
+            <RelativeLayout
+                android:id="@+id/rl_player_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--唱片-->
+                <com.exemple.lenvo.musicplayer.view.RecordView
+                    android:id="@+id/rv"
+                    android:transitionName="banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.exemple.lenvo.musicplayer.view.RecordView>
+
+                <!--指针-->
+                <com.exemple.lenvo.musicplayer.view.RecordThumbView
+                    android:id="@+id/rt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
             <!--歌词-->
             <LinearLayout
                 android:id="@+id/lyric_container"
@@ -69,31 +89,11 @@
 
                 </LinearLayout>
 
-                <com.exemple.lenvo.musicplayer.view.ListLyricView
+                <com.exemple.lenvo.musicplayer.view.LyricView
                     android:id="@+id/lv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl_player_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <!--唱片-->
-                <com.exemple.lenvo.musicplayer.view.RecordView
-                    android:id="@+id/rv"
-                    android:transitionName="banner"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </com.exemple.lenvo.musicplayer.view.RecordView>
-
-                <!--指针-->
-                <com.exemple.lenvo.musicplayer.view.RecordThumbView
-                    android:id="@+id/rt"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </RelativeLayout>
 
         </RelativeLayout>
 

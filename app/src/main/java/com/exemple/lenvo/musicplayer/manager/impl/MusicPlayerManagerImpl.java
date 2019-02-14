@@ -38,6 +38,8 @@ public class MusicPlayerManagerImpl implements MusicPlayerManager, MediaPlayer.O
     /**
      * 媒体播放器
      */
+    //测试使用，记得改为private
+    //public static MediaPlayer player;
     private MediaPlayer player;
 
     /**
@@ -68,6 +70,7 @@ public class MusicPlayerManagerImpl implements MusicPlayerManager, MediaPlayer.O
             player.setDataSource(uri);
             player.prepare();
             player.start();
+
 
             handler.obtainMessage(MSG_PLAYING).sendToTarget();
 

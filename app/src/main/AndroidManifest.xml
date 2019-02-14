@@ -84,7 +84,11 @@
         <service
             android:name=".service.MusicPlayerService"
             android:enabled="true"
-            android:exported="false"></service>
+            android:exported="false" />
+
+        <activity android:name=".activity.ListDetailActivity"
+            android:label="@string/list_detail"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
     </application>
 
 </manifest>

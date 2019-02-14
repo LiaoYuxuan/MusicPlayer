@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.exemple.lenvo.musicplayer.R;
 import com.exemple.lenvo.musicplayer.activity.BaseWebViewActivity;
-import com.exemple.lenvo.musicplayer.activity.MusicPlayerActivity;
+import com.exemple.lenvo.musicplayer.activity.ListDetailActivity;
 import com.exemple.lenvo.musicplayer.adapter.BaseRecyclerViewAdapter;
 import com.exemple.lenvo.musicplayer.adapter.RecommendAdapter;
 import com.exemple.lenvo.musicplayer.api.Api;
@@ -114,22 +114,22 @@ public class RecommendFragment extends BaseCommonFragment implements OnBannerLis
         adapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseRecyclerViewAdapter.ViewHolder holder, int position) {
-//                Object data =  adapter.getData(position);
-//                if (data instanceof Song) {
-//                    //单曲
+                Object data =  adapter.getData(position);
+                if (data instanceof Song) {
+                    //单曲
 //                    ArrayList<Song> list = new ArrayList<>();
 //                    list.add((Song) data);
 //                    playListManager.setPlayList(list);
 //                    playListManager.play((Song) data);
 //                    startActivity(MusicPlayerActivity.class);
-//                } else if (data instanceof List) {
-//                    //歌单
-//                    startActivityExtraId(ListDetailActivity.class,((List) data).getId());
-//                } else if (data instanceof Advertisement) {
-//                    //广告
-//                    BaseWebViewActivity.start(getMainActivity(),((Advertisement) data).getTitle(),((Advertisement) data).getUri());
-//                }
-                startActivity(MusicPlayerActivity.class);
+                } else if (data instanceof List) {
+                    //歌单
+                    startActivityExtraId(ListDetailActivity.class,((List) data).getId());
+                } else if (data instanceof Advertisement) {
+                    //广告
+                    BaseWebViewActivity.start(getMainActivity(),((Advertisement) data).getTitle(),((Advertisement) data).getUri());
+                }
+                //startActivity(MusicPlayerActivity.class);
             }
         });
 

@@ -80,7 +80,7 @@ public interface Service {
      * 歌单列表
      * @return
      */
-    @GET("sheets.json")
+    @GET("sheets/create.json")
     Observable<ListResponse<List>> lists(@QueryMap Map<String, String> data);
 //
 //    /**
@@ -209,13 +209,13 @@ public interface Service {
 //    @GET("songs/{id}.json")
 //    Observable<DetailResponse<Song>> songsDetail(@Path("id") String id);
 //
-//    /**
-//     * 获取歌单详情
-//     * @param id
-//     * @return
-//     */
-//    @GET("sheets/{id}.json")
-//    Observable<DetailResponse<List>> listDetail(@Path("id") String id);
+    /**
+     * 获取歌单详情
+     * @param id
+     * @return
+     */
+    @GET("sheets/{id}.json")
+    Observable<DetailResponse<List>> listDetail(@Path("id") String id);
 //
 //    /**
 //     * 评论列表
